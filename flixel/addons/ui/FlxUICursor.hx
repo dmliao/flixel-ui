@@ -89,7 +89,7 @@ class FlxUICursor extends FlxUISprite
 		if (FlxG.mouse != null && Std.is(FlxG.mouse, FlxUIMouse) == false)
 		{
 			_newMouse = new FlxUIMouse(FlxG.mouse.cursorContainer);
-			FlxG.mouse = _newMouse;
+			FlxG.inputs.replace(FlxG.mouse, _newMouse);
 		}
 		else
 		{
